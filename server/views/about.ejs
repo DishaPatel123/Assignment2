@@ -1,0 +1,42 @@
+<!-- 
+        File name: about.ejs (it containt page code)
+         Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<!-- including heaeders and footers ejs file -->
+<%- include('partials/header'); -%>
+<div class="content">
+    <div class="container">
+        <div class="row" style="width: 100%;">
+            <div class="px-4 py-3 col-sm-12 col-md-3">
+                <!-- setting my image -->
+                
+                     <div class="col-sm-4"><img src="img/IMG_3401.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="306">  </div>
+
+</div>   
+            </div>
+            <!-- setting details about me -->
+            <div class="px-4 py-2 col-sm-12 col-md-9">
+                <h1 class="display-4">Jr Software Devloper</h1>
+                <p>
+                    <b>Name: </b> Disha Patel<br/>
+                    <b>Age: </b> 30 <br/>
+                    <b>Last education:</b> Information Technology <br/>
+                    <b>Last education year:</b> 2015 <br/>
+                </p>
+                <p>
+                    
+                </p>
+                <p>
+                    <!-- it will allow user download my resume -->
+                    <form action="img/disha_resume.pdf" method="get" class="site-form">
+                        <div class="form-group">
+                          <input type="submit" name="submit" id="submit"  value="Resume" style="width:200px;"  class="btn btn-info pull-left">
+                        </div>
+                      </form>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); -%>

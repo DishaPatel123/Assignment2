@@ -1,0 +1,63 @@
+<!-- 
+        File name: add_contact.ejs
+       Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<%- include("../partials/header"); -%>
+<!-- It will display form for adding contact details -->
+<div class="content">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div style="width: auto;" class="container">
+            <h3 class="text-center mb-3" style="color: #545149;"> Add Contact </h3>
+            <form method="POST">
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="name" class="form-label">Contact Name: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="name" class="form-control" type="text" placeholder="Jane doe" aria-label="Name"
+                            required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="number" class="form-label">Contact Number: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="number" class="form-control" type="tel" placeholder="1234567890"
+                            aria-label="Contact Number" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="email" class="form-label">Contact Email: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="email" class="form-control" type="email" placeholder="abc@email.com"
+                            aria-label="email" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="email" class="form-label">Contact Designation: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="designation" class="form-control" type="text" placeholder="Designation"
+                            aria-label="Designation" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-sm-12 col-md-6">
+                        <button type="submit" id="login" role="button" class="btn btn-block btn-md btn-custom">Add Contact <i
+                            class="fas fa-md fa-address-card"></i></button>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <a href="/contact/" class="btn-custom btn btn-block btn-md">Cancel <i class="fas fa-md fa-times"
+                            role="button"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer"); -%>

@@ -1,0 +1,86 @@
+<!-- 
+        File name: contact.ejs (it containt page code)
+         Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<!-- including heaeders and footers ejs file -->
+<%- include("partials/header"); -%>
+<div class="content">
+    <h1 class="my-2 text-center">
+        Contact Me
+    </h1>
+    <div class="container">
+        <div class="row" style="width: 100%;">
+            <div class="col-sm-12 px-4 py-2 col-md-6">
+                <!-- setting details of of my contact information -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h4>Office Location</h4>
+                        <p>
+                            <i class="fas fa-md fa-map-marker-alt"></i>
+                            Ellesemere Road, <br>
+                            Scarborough,ON<br>
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h4>Direct Contact</h4>
+                        <p>
+                            <b><i class="fas fa-md fa-phone-alt"></i> Phone: </b><a
+                                href="tel: "></a>
+                            <br>
+                            <b><i class="fas fa-md fa-envelope"></i> Email: </b><a
+                                href="mailto: "></a>
+                            <br>
+                            <b><i class="fas fa-md fa-globe"></i> Website: </b><a
+                                href=""></a>
+                        </p>
+                    </div>
+                </div>
+                <!-- This div will set google map on the contact us page -->
+                <div id="map1">
+
+                </div>
+            </div>
+            <div class="col-sm-12 px-4 py-2 col-md-6">
+                <!-- sending form data using the post method and user will be redirected to the home page-->
+                <form method="POST">
+                    <div class="row g-2 mb-2">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input name="fname" class="form-control" type="text" placeholder="Jane" aria-label="First Name" required>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input name="lname" class="form-control" type="text" placeholder="Doe" aria-label="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="inputEmail1" class="form-label">Email address</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.com"
+                            aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="contactNumber" class="form-label">Phone number</label>
+                        <input name="phoneNumber" class="form-control" type="tel" placeholder="+1 111 111-1111" minlength="9"
+                            maxlength="12" aria-label="Phone Number">
+                    </div>
+                    <div class="mb-2">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input name="subject" class="form-control" type="text" placeholder="Subject" aria-label="Subject" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea name="message" class="form-control" id="exampleFormControlTextarea1"
+                            placeholder="Type your message here." rows="3" required></textarea>
+                        <div id="emailHelp" class="form-text">*Your email address and phone number will not be shared
+                            with
+                            anyone else.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-md btn-block btn-custom">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); -%>

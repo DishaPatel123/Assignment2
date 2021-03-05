@@ -1,0 +1,45 @@
+<!-- 
+        File name: contact_list.ejs
+        Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<%- include("../partials/header"); -%>
+<!-- It will display the contact list which are avialable in the database. -->
+<div class="content">
+    <div style="width: auto;" class="container">
+        <h3 class="mt-3 text-center">Contact list</h3>
+        <!-- Link for adding contacts -->
+        <a href="/contact/add" class="btn-custom btn btn-sm">Add contact <i
+            class="fas fa-md fa-plus" role="button"></i></a>
+        <!-- Link for logout from the site -->
+        <a href="/logout" class="btn-custom btn btn-sm">Logout <i
+                class="fas fa-md fa-sign-out-alt" role="button"></i></a>
+        <table class="table table-hover table-striped caption-top">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for( let index = 0; index < contacts.length; index++ ) { %>
+                    <tr>
+                        <th scope="row"><%= index+1 %></th>
+                        <td><%= contacts[index].contactName %></td> 
+                        <td><%= contacts[index].contactNumber %></td>
+                        <td><%= contacts[index].emailAddress %></td>
+                        <td><a href="/contact/edit/<%- contacts[index].id %>" id="edit" role="button" class="btn btn-sm btn-custom"><i
+                                    class="text-primary fas fa-md fa-edit" role="button"></i></a></td>
+                        <td><a href="/contact/delete/<%- contacts[index].id %>" id="delete" role="button" class="btn btn-sm btn-custom"><i
+                                    class="text-danger fas fa-md fa-trash-alt" role="button"></i></a></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<%- include("../partials/footer"); -%>

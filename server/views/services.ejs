@@ -1,0 +1,50 @@
+<!-- 
+        File name: services.ejs (it containt page code)
+         Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<!-- including heaeders and footers ejs file -->
+<%- include("partials/header"); -%>
+<div class="content">
+    <h1 class="my-2 text-center my-2">
+        My Services
+    </h1>
+    <div class="container">
+        <!-- This div set services i provide. It hase image and few details about services -->
+        <div class="row row-cols-1 row-cols-md-2 g-4 mx-2 mb-3">
+            <div class="col">
+                <div class="card border-dark border-1 rounded-0">
+                    <%- include("partials/svgs/responsive") %> 
+                    <div class="card-body">
+                        <h5 class="card-title">Software Engineer</h5>
+                        <p class="card-text">Give object-arranged programming (OOS) plan for one of the development business' driving undertaking the executives stages. Create and alter programming for various customer base
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-dark border-1 rounded-0">
+                    <%- include("partials/svgs/web_design") %> 
+                    <div class="card-body">
+                        <h5 class="card-title">Junior Software Engineer</h5>
+                        <p class="card-text">Aided the plan and advancement of client data arrangements and Internet applications for a main money related administrations organization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-dark border-1 rounded-0">
+                    <%- include("partials/svgs/web_coding") %> 
+                    <div class="card-body">
+                        <h5 class="card-title">Web Developer</h5>
+                        <p class="card-text">I provide Web coding services which can be bug free and optimised as per
+                            standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); -%>

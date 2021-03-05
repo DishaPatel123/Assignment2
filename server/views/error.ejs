@@ -1,0 +1,21 @@
+<!-- 
+        File name: error.ejs (it containt error code and status)
+         Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<!-- including heaeders and footers ejs file -->
+<%- include("partials/header"); -%>
+  <div class="content">
+    <div class="h-100 d-flex text-center align-items-center justify-content-center">
+      <div>
+        <!-- It shows an error in console due to 404 error icon -->
+        <i class="fas fa-searchengin fa-3x"></i>
+        <h2 class="mt-2" style="color: #545149;">
+          <% console.log(error.status); %> 
+          <% console.log(error.message); %> 
+            <%= error.status %> <%= error.message %>
+        </h2>
+      </div>
+    </div>
+  </div>
+<%- include("partials/footer"); -%>

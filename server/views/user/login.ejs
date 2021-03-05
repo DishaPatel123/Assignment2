@@ -1,0 +1,32 @@
+<!-- 
+        File name: login.ejs
+         Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<%- include("../partials/header"); -%>
+<div class="content">
+    <!-- Alter will be message displayed -->
+    <% if (messages.length > 0) { %>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+    <% } %>  
+    <div class="h-100 d-flex text-center align-items-center justify-content-center">
+        <div style="width: auto;" class="container">
+            <h3 style="color: #545149;"> Login </h3>
+            <form method="POST">
+                <div class="mb-2">
+                    <input name="username" class="form-control" type="text" placeholder="Username"
+                        aria-label="User Name" required>
+                </div>
+                <div class="mb-2">
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Password"
+                        aria-describedby="userPassword" required>
+                </div>
+                <button type="submit" id="login" role="button" class="btn btn-block btn-md btn-custom">Login <i
+                        class="fas fa-md fa-sign-in-alt"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer"); -%>

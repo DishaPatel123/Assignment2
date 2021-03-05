@@ -1,0 +1,57 @@
+<!-- 
+        File name: update_contact.ejs
+        Student Name: Disha Patel
+        StudentID: 301149367
+-->
+<%- include("../partials/header"); -%>
+<!-- It will set the contact details on the form and user will be able to change details and update it on the database. -->
+<div class="content">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div style="width: auto;" class="container">
+            <h3 class="text-center mb-3" style="color: #545149;"> Update Contact </h3>
+            <form method="POST">
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="name" class="form-label">Contact Name: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="name" class="form-control" type="text" placeholder="Jane doe" aria-label="Name"
+                            value="<%= contact.contactName %>" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="number" class="form-label">Contact Number: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="number" class="form-control" type="tel" placeholder="1234567890"
+                            value="<%= contact.contactNumber %>" aria-label="Contact Number" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="email" class="form-label">Contact Email: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="email" class="form-control" type="email" placeholder="abc@email.com"
+                            value="<%= contact.emailAddress %>" aria-label="email" required>
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div style="margin-bottom: -10px;" class="col-sm-12 col-md-6">
+                        <label for="email" class="form-label">Contact Designation: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input name="designation" class="form-control" type="text" placeholder="Designation"
+                            value="<%= contact.designation %>" aria-label="Designation" required>
+                    </div>
+                </div>
+                <button type="submit" id="login" role="button" class="btn btn-block btn-md btn-custom">Update Contact <i
+                        class="fas fa-md fa-address-card"></i></button>
+                <a href="/contact/" class="btn-custom btn-block btn-sm btn">Cancel <i class="fas fa-md fa-times"
+                        role="button"></i></a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer"); -%>
